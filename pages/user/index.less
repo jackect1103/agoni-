@@ -1,0 +1,152 @@
+page {
+    background-color: #ccc;
+}
+
+.user_info_wrap {
+    height: 45vh;
+    background-color: var(--themeColor);
+
+    .user_img_wrap {
+        position: relative;
+
+        .user_bg {
+            height: 46vh;
+            filter: blur(5px)
+        }
+
+        .user_info {
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 120rpx;
+            height: 200rpx;
+            text-align: center;
+
+            // width:
+            .user_icon {
+                width: 150rpx;
+                height: 150rpx;
+                border-radius: 50%;
+            }
+
+            .user_name {
+                color: #fff;
+                margin-top: 40rpx;
+                font-size: 35rpx;
+            }
+        }
+    }
+
+    .login_btn {
+        position: absolute;
+        top: 15%;
+        left: 50%;
+        transform: translateX(-50%);
+
+        button {
+            color: #fff;
+            border: 1rpx solid#fff;
+        }
+    }
+}
+
+
+.user_content {
+    position: relative;
+
+    .user_main {
+        width: 90%;
+        position: absolute;
+        top: -40rpx;
+        left: 50%;
+        transform: translateX(-50%);
+
+        // 收藏的商品
+        .goods_show {
+            background-color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            view {
+                flex: 1;
+                font-size: 25rpx;
+                text-align: center;
+                padding: 5rpx 0;
+
+                .goods_nums {
+                    color: var(--themeColor);
+                }
+            }
+        }
+
+        //我的订单
+        .goods_order_list {
+            margin-top: 20rpx;
+
+            .order_title {
+                padding: 10rpx 20rpx;
+                border-bottom: 1px solid #ccc;
+                background-color: #fff;
+            }
+
+            .order_show {
+                background-color: #fff;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                view {
+                    flex: 1;
+                    font-size: 25rpx;
+                    text-align: center;
+                    padding: 5rpx 0;
+
+                    .iconfont {
+                        color: var(--themeColor);
+                        font-size: 40rpx;
+                    }
+                }
+            }
+        }
+
+        // 收获地址管理
+        .address_admin {
+            padding: 20rpx;
+            border-bottom: 1px solid #ccc;
+            background-color: #fff;
+            margin-top: 20rpx;
+            font-size: 25rpx;
+        }
+
+        // 关于我们
+        .application_about {
+            margin-top: 20rpx;
+
+            .about {
+                padding: 20rpx;
+                border-bottom: 1px solid #ccc;
+                background-color: #fff;
+                font-size: 25rpx;
+                border-bottom: 1px solid #ccc;
+            }
+
+            .contact {
+                display: flex;
+                align-items: center;
+
+                view {
+                    flex: 1;
+
+                }
+
+                view:nth-child(2) {
+                    display: flex;
+                    justify-content: flex-end;
+                }
+            }
+        }
+    }
+
+}

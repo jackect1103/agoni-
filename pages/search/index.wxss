@@ -1,0 +1,38 @@
+page {
+  background-color: #ccc;
+  padding: 20rpx;
+}
+.search_row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60rpx;
+}
+.search_row .search_input {
+  flex: 1;
+  background-color: #fff;
+  margin-right: 15rpx;
+  height: 100%;
+  padding-left: 15rpx;
+}
+.search_row .search_btn {
+  width: 110rpx;
+  font-size: 28rpx;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.serach_content {
+  margin-top: 25rpx;
+}
+.serach_content .search_item {
+  background-color: #fff;
+  font-size: 26rpx;
+  padding: 15rpx 10rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  border-bottom: 1rpx solid #ccc;
+}

@@ -1,0 +1,23 @@
+/*导入iconfont.wxss样式文件*/
+@import './styles/iconfont.wxss';
+
+/*微信小程序中，是不支持通配符的‘*’ */
+page,view,text,swiper,swiper-item,image,navigator{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/*
+ 主题颜色 通过变量实现
+ 1. less 中 存在变量这个知识
+ 2. 原生的css和wxss页是支持 变量
+ */
+ page{
+     /*定义主题颜色*/
+     --themeColor:#eb4450;
+     font-size: 24rpx;
+ }
+ image{
+     width: 100%;
+ }

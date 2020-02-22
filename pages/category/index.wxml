@@ -1,0 +1,37 @@
+<view class="cates">
+    <searchInput></searchInput>
+    <view class="cates_container">
+        <!-- 左边商品分类名 -->
+        <scroll-view scroll-y class="leftMenuList">
+            <!-- wk:key="*this",代表在for循环中的item自身，
+                这种表示需要item本身就是一个唯一的字符串或者数字。 -->
+            <view class="menu_list {{currentIndex == index ? 'active':''}}" wx:for="{{leftMenuList}}" wx:key="*this"
+                bindtap="handleIndex"
+                data-index="{{index}}">
+                {{item}}
+            </view>
+        </scroll-view>
+        <!-- 右边商品显示 -->
+        <scroll-view scroll-top='{{topNumber}}' scroll-y class="rightContent">
+            <view class="goods_list">
+                <view class="goods_container" wx:for="{{rightConetnt}}" wx:key="*this">
+                    <view class="goods_title">
+                        {{item.cat_name}}
+                    </view>
+                    <view class="goods_info_wrap">
+                        <navigator 
+                            url="/pages/goods_list/index?cid={{item2.cat_id}}" 
+                            class="goods_info" 
+                            wx:for="{{item.children}}" 
+                            wx:key="*this" 
+                            wx:for-item="item2"
+                            wx:key-item="item2">
+                            <image src="{{item2.cat_icon}}" mode="widthFix"></image>
+                            <text>{{item2.cat_name}}</text>
+                        </navigator>
+                    </view>
+                </view>
+            </view>
+        </scroll-view>
+    </view>
+</view>

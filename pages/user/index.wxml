@@ -1,0 +1,64 @@
+<view class="user_info_wrap">
+    <view class="user_img_wrap" wx:if="{{userInfo.avatarUrl}}">
+        <image class="user_bg" src="{{userInfo.avatarUrl}}"></image>
+        <view class="user_info">
+            <image class="user_icon" src="{{userInfo.avatarUrl}}"></image>
+            <view class="user_name">{{userInfo.nickName}}</view>
+        </view>
+    </view>
+    <view class="login_btn" wx:else>
+        <button type="primary" plain bindgetuserinfo="handleGetUserInfo" open-type="getUserInfo">登录</button>
+    </view>
+</view>
+<view class="user_content">
+    <view class="user_main">
+        <view class="goods_show">
+            <view>
+                <view class="goods_nums">0</view>
+                <view class="goods_info">收藏的店铺</view>
+            </view>
+            <navigator url="/pages/showCollect/index">
+                <view class="goods_nums">{{collectGoods.length}}</view>
+                <view class="goods_info">收藏的商品</view>
+            </navigator>
+            <view>
+                <view class="goods_nums">0</view>
+                <view class="goods_info">关注的商品</view>
+            </view>
+            <view>
+                <view class="goods_nums">0</view>
+                <view class="goods_info">我的足迹</view>
+            </view>
+        </view>
+        <view class="goods_order_list">
+            <view class="order_title">我的订单</view>
+            <view class="order_show">
+                <view>
+                    <view class="iconfont icon-danju"></view>
+                    <view class="order_info">全部订单</view>
+                </view>
+                <view>
+                    <view class="iconfont icon-fukuantongzhi"></view>
+                    <view class="order_info">代付款</view>
+                </view>
+                <view>
+                    <view class="iconfont icon-receipt-address"></view>
+                    <view class="order_info">待收货</view>
+                </view>
+                <view>
+                    <view class="iconfont icon-icon5"></view>
+                    <view class="order_info">退货/退款</view>
+                </view>
+            </view>
+        </view>
+        <view class="address_admin">收获地址管理</view>
+        <view class="application_about">
+            <view class="about contact">
+                <view>联系客服</view>
+                <view>400-618-4000</view>
+            </view>
+            <view class="about">意见反馈</view>
+            <view class="about">关于我们</view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,69 @@
+<!-- 收货地址 -->
+<view class="add_address_btn">
+    <view wx:if="{{!userAddress.userName}}" class="receive_address">
+        <button type="primary" plain bindtap="addAddress">添加收货地址</button>
+    </view>
+    <view wx:else class="user_all_infos">
+        <view class="user_info">
+            <view>收货人：{{userAddress.userName}}</view>
+            <view>{{userAddress.all}}</view>
+        </view>
+        <view class="user_phone">{{userAddress.telNumber}}</view>
+    </view>
+</view>
+<!-- 购物车列表显示 -->
+<view class="show_goods_list">
+    <view class="goods_title">购物车</view>
+    <block wx:if="{{cartList.length!=0}}">
+        <view class="goods_wrapper">
+            <view class="goods_list" wx:for="{{cartList}}" wx:key="*this">
+                <view class="goods_check">
+                    <checkbox-group data-id="{{item.goods_id}}" bindchange="handleChange">
+                        <checkbox checked="{{item.checked}}"></checkbox>
+                    </checkbox-group>
+                </view>
+                <view class="goods_img">
+                    <image mode="widthFix" src="{{item.goods_small_logo}}"></image>
+                </view>
+                <view class="goods_info">
+                    <view class="goods_info_title">{{item.goods_name}}</view>
+                    <view class="goods_info_operation">
+                        <view class="goods_price">￥{{item.goods_price}}</view>
+                        <view class="goods_operation">
+                            <view class="goods_num num_edit" bindtap="addGoods" data-nums="-1"
+                                data-goods_id="{{item.goods_id}}">-</view>
+                            <view class="goods_num">{{item.num}}</view>
+                            <view class="goods_num num_edit" bindtap="addGoods" data-nums="1"
+                                data-goods_id="{{item.goods_id}}">+</view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </block>
+    <!-- 购物车暂无商品 -->
+    <block wx:else>
+        <image
+            src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1580899639768&di=3782c9d47727876e4334a2ea1bd28087&imgtype=0&src=http%3A%2F%2Fm.hua.com%2Fimages%2Fgwc_k.png"
+            mode="widthFix"></image>
+    </block>
+</view>
+<!-- 结算 -->
+<view class="moneyTotal">
+    <view class="checkAll">
+        <checkbox-group bindchange="allCkeckedBtn">
+            <checkbox checked="{{allChecked}}"></checkbox>
+            <text>全选</text>
+        </checkbox-group>
+    </view>
+    <view class="total">
+        <view class="goods_price">
+            合计：
+            <text>￥{{totalPrice}}</text>
+        </view>
+        <view class="freight">包含运费</view>
+    </view>
+    <view class="Settlement" bindtap="Settlement">
+        <view class="Settlement_btn">结算({{totalCartNums}})</view>
+    </view>
+</view>

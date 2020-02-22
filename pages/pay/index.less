@@ -1,0 +1,131 @@
+.add_address_btn {
+    .user_all_infos {
+        display: flex;
+
+        padding: 20rpx;
+
+        .user_info {
+            flex: 5;
+        }
+
+        .user_phone {
+            flex: 3;
+            text-align: right;
+        }
+    }
+}
+
+.show_goods_list {
+    .goods_title {
+        padding: 20rpx;
+        border-top: 1px solid #FB544C;
+        border-bottom: 1px solid #FB544C;
+        font-size: 40rpx;
+    }
+
+    .goods_list {
+        padding: 10rpx;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-bottom: 1px solid #ccc;
+
+        .goods_img {
+            flex: 2;
+
+            image {
+                width: 80%;
+            }
+        }
+
+        .goods_info {
+            flex: 5;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            .goods_info_title {
+                display: -webkit-box;
+                overflow: hidden;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+            }
+
+            .goods_info_operation {
+                display: flex;
+                justify-content: space-between;
+
+                .goods_price {
+                    flex: 1;
+                    color: var(--themeColor);
+                    font-size: 30rpx;
+                }
+
+                .goods_operation {
+                    flex: 1;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    align-items: flex-end;
+                    padding-right: 20rpx;
+
+                    .goods_num {
+                        width: 50rpx;
+                        height: 50rpx;
+                        width: 100%;
+                        font-size: 20rpx;
+                        font-size: 30rpx;
+                        text-align: right;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.moneyTotal {
+    display: flex;
+    width: 100%;
+    height:80rpx;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    border-top: 1px solid #ccc;
+    .total {
+        flex:3;
+        font-size: 35rpx;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding-right: 15rpx;
+        .goods_price {
+            align-self: flex-end;
+            text{
+                color:var(--themeColor)
+            }
+        }
+
+        .freight {
+            align-self: flex-end;
+            font-size:25rpx;
+        }
+    }
+
+    .Settlement {
+        flex:2; 
+        height: 80rpx;
+        .Settlement_btn {
+           height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: var(--themeColor);
+            color:#fff;
+            margin: 0;
+            font-size: 32rpx;
+        }
+    }
+}

@@ -1,0 +1,15 @@
+<view class="show_goods_list">
+    <view class="goods_wrapper">
+        <view class="goods_list" wx:for="{{cartList}}" wx:key="*this">
+            <view class="goods_img">
+                <image mode="widthFix" src="{{item.goods_small_logo}}"></image>
+            </view>
+            <view class="goods_info">
+                <view class="goods_info_title">{{item.goods_name}}</view>
+                <view class="goods_info_operation">
+                    <view class="goods_price">￥{{item.goods_price}}</view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,54 @@
+<view class="pyg_index">
+    <!-- 搜索框 开始 -->
+    <searchInput></searchInput>
+    <!-- 搜索框 结束 -->
+    <!-- tabs 开始 -->
+    <tabs tabs="{{tabs}}" bindParent='setParent'>
+        <!-- 使用插槽 切换tabs显示 -->
+        <block wx:if="{{currentIndex == 0}}">
+            <view class="first_tab">
+                <navigator url="/pages/goods_detail/main?goods_id={{item.goods_id}}" class="goods_item" wx:for="{{goods_list}}" wx:key="*this" open-type="navigate">
+                    <view class="goods_img_info">
+                        <image
+                            src="{{item.goods_small_logo}}"
+                            mode="widthFix"></image>
+                    </view>
+                    <view class="goods_info_info">
+                        <view class="good_name">{{item.goods_name}}</view>
+                        <view class="good_price">￥{{item.goods_price}}</view>
+                    </view>
+                </navigator>
+            </view>
+        </block>
+        <block wx:elif="{{currentIndex == 1}}">
+            <view class="first_tab">
+                <navigator class="goods_item" url="" wx:for="{{3}}" wx:key="*this" open-type="navigate">
+                    <view class="goods_img_info">
+                        <image src="https://api.zbztb.cn/full/2fb113b32f7a2b161f5ee4096c319afedc3fd5a1.jpg"
+                            mode="widthFix"></image>
+                    </view>
+                    <view class="goods_info_info">
+                        <view class="good_name">spike 经典武士大马士革直刀(微型) 户外野营直刀 收藏礼品刀 饰品刀具</view>
+                        <view class="good_price">￥6499</view>
+                    </view>
+                </navigator>
+            </view>
+        </block>
+        <block wx:else>
+            <view class="first_tab">
+                <navigator class="goods_item" url="" wx:for="{{3}}" wx:key="*this" open-type="navigate">
+                    <view class="goods_img_info">
+                        <image
+                            src="http://image1.suning.cn/uimg/b2c/newcatentries/0070134290-000000000149003877_1_800x800.jpg"
+                            mode="widthFix"></image>
+                    </view>
+                    <view class="goods_info_info">
+                        <view class="good_name">spike 经典武士大马士革直刀(微型) 户外野营直刀 收藏礼品刀 饰品刀具</view>
+                        <view class="good_price">￥6499</view>
+                    </view>
+                </navigator>
+            </view>
+        </block>
+    </tabs>
+    <!-- tabs 结束 -->
+</view>

@@ -1,0 +1,50 @@
+.show_goods_list .goods_list {
+  padding: 10rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+}
+.show_goods_list .goods_list .goods_img {
+  flex: 2;
+}
+.show_goods_list .goods_list .goods_img image {
+  width: 80%;
+}
+.show_goods_list .goods_list .goods_info {
+  flex: 5;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.show_goods_list .goods_list .goods_info .goods_info_title {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.show_goods_list .goods_list .goods_info .goods_info_operation {
+  display: flex;
+  justify-content: space-between;
+}
+.show_goods_list .goods_list .goods_info .goods_info_operation .goods_price {
+  flex: 1;
+  color: var(--themeColor);
+  font-size: 30rpx;
+}
+.show_goods_list .goods_list .goods_info .goods_info_operation .goods_operation {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-items: flex-end;
+  padding-right: 20rpx;
+}
+.show_goods_list .goods_list .goods_info .goods_info_operation .goods_operation .goods_num {
+  width: 50rpx;
+  height: 50rpx;
+  width: 100%;
+  font-size: 20rpx;
+  font-size: 30rpx;
+  text-align: right;
+}

@@ -1,0 +1,43 @@
+<!-- 收货地址 -->
+<view class="add_address_btn">
+    <view class="user_all_infos">
+        <view class="user_info">
+            <view>收货人：{{userAddress.userName}}</view>
+            <view>{{userAddress.all}}</view>
+        </view>
+        <view class="user_phone">{{userAddress.telNumber}}</view>
+    </view>
+</view>
+<!-- 购物车列表显示 -->
+<view class="show_goods_list">
+    <view class="goods_title">购物车</view>
+    <view class="goods_wrapper">
+        <view class="goods_list" wx:for="{{cartList}}" wx:key="*this">
+            <view class="goods_img">
+                <image mode="widthFix" src="{{item.goods_small_logo}}"></image>
+            </view>
+            <view class="goods_info">
+                <view class="goods_info_title">{{item.goods_name}}</view>
+                <view class="goods_info_operation">
+                    <view class="goods_price">￥{{item.goods_price}}</view>
+                    <view class="goods_operation">
+                        <view class="goods_num">X{{item.num}}</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
+<!-- 结算 -->
+<view class="moneyTotal">
+    <view class="total">
+        <view class="goods_price">
+            合计：
+            <text>￥{{totalPrice}}</text>
+        </view>
+        <view class="freight">包含运费</view>
+    </view>
+    <view class="Settlement" bindtap="pay">
+        <view class="Settlement_btn">支付({{totalCartNums}})</view>
+    </view>
+</view>

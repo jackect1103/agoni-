@@ -1,0 +1,33 @@
+.first_tab .goods_item {
+  display: flex;
+  border-bottom: 1px solid #ccc;
+  /* 图片 */
+  /* 详细信息 */
+}
+.first_tab .goods_item .goods_img_info {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.first_tab .goods_item .goods_img_info image {
+  width: 75%;
+}
+.first_tab .goods_item .goods_info_info {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.first_tab .goods_item .goods_info_info .good_name {
+  /* 使用这四行来实现省略号 */
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  /* 第几行开始显示省略号 */
+  -webkit-line-clamp: 2;
+}
+.first_tab .goods_item .goods_info_info .good_price {
+  color: var(--themeColor);
+  font-size: 30rpx;
+}
